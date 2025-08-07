@@ -386,7 +386,6 @@ const Home = () => {
       <GradientDivider />
       
       <FeaturedVideoSection>
-        <h2>Featured Video</h2>
         <VideoSection
           src="https://player.vimeo.com/video/1073658206?h=807f031d17"
           title="Featured Video"

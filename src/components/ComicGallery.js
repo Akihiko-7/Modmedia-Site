@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const ComicContainer = styled.div`
   opacity: 1;
@@ -95,6 +96,29 @@ const NoteText = styled.p`
   text-align: center;
 `;
 
+const ComicLink = styled(Link)`
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(45deg, #ff00ff, #00d4ff);
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 25px;
+  box-shadow: 0 0 15px #00d4ff;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-align: center;
+  margin: 1.25rem auto;
+  display: block;
+  max-width: 200px;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff00ff;
+  }
+`;
+
 const ComicGallery = () => {
   const [expanded, setExpanded] = useState(null);
 
@@ -131,6 +155,7 @@ const ComicGallery = () => {
       </ComicGrid>
       <NoteText>Submit your $Snowdn-related artwork to be featured here!</NoteText>
       <NoteText>HODLers of Multiple Months become Stakeholders in a US Media Company- (ModMedia™), are able to join ModMedia Meetings on X.com, & Get Exclusive Comic Content Drops.</NoteText>
+      <ComicLink to="/snowden-nfts">Check out Comics</ComicLink>
     </ComicContainer>
   );
 };

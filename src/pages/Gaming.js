@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import Footer from '../components/Footer';
 
-// Particle system component
 const Particles = () => {
   const canvasRef = useRef(null);
 
@@ -12,11 +11,9 @@ const Particles = () => {
     let particles = [];
     const particleCount = window.innerWidth < 768 ? 50 : 150;
 
-    // Set canvas size
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Particle class
     class Particle {
       constructor() {
         this.x = Math.random() * canvas.width;
@@ -48,7 +45,6 @@ const Particles = () => {
       }
     }
 
-    // Initialize particles
     function init() {
       particles = [];
       for (let i = 0; i < particleCount; i++) {
@@ -56,11 +52,9 @@ const Particles = () => {
       }
     }
 
-    // Animation loop
     function animate() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Connect particles
       for (let a = 0; a < particles.length; a++) {
         for (let b = a; b < particles.length; b++) {
           const dx = particles[a].x - particles[b].x;
@@ -86,7 +80,6 @@ const Particles = () => {
     init();
     animate();
 
-    // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -111,7 +104,6 @@ const ParticlesCanvas = styled.canvas`
   z-index: -1;
 `;
 
-// Keyframe animations
 const neonGlow = keyframes`
   0%, 100% {
     text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
@@ -157,7 +149,6 @@ const glitchEffect = keyframes`
   100% { transform: translate(0); }
 `;
 
-// Styled components
 const GamingContainer = styled.div`
   min-height: 100vh;
   background: linear-gradient(135deg, #0a0a2a, #1a1a4a, #2a2a6a);
@@ -438,6 +429,17 @@ const ComingSoon = styled.div`
   }
 `;
 
+const Disclaimer = styled.div`
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 800px;
+  font-size: 0.9rem;
+  color: #e0e7ff;
+  opacity: 0.7;
+  line-height: 1.5;
+`;
+
 const Gaming = () => {
   return (
     <GamingContainer>
@@ -459,6 +461,14 @@ const Gaming = () => {
         </GameCard>
         
         <GameCard style={{ animationDelay: '1s' }}>
+          <h3>Super Mario 63</h3>
+          <p>A fan-made tribute to classic Mario adventures with new levels and challenges!</p>
+          <GameLink href="https://freegames.org/super-mario-63/" target="_blank" rel="noopener noreferrer">
+            Play Now
+          </GameLink>
+        </GameCard>
+        
+        <GameCard style={{ animationDelay: '2s' }}>
           <h3>Retro Arcade</h3>
           <p>Coming soon - a collection of classic arcade games with a modern twist!</p>
           <GameLink as="div" style={{ background: '#333', boxShadow: '0 0 15px #555', cursor: 'not-allowed' }}>
@@ -466,7 +476,7 @@ const Gaming = () => {
           </GameLink>
         </GameCard>
         
-        <GameCard style={{ animationDelay: '2s' }}>
+        <GameCard style={{ animationDelay: '3s' }}>
           <h3>Cryptographer's Exile</h3>
           <p>Our debut indie game - an epic adventure through cyberpunk landscapes!</p>
           <GameLink as="div" style={{ background: '#333', boxShadow: '0 0 15px #555', cursor: 'not-allowed' }}>
@@ -486,6 +496,10 @@ const Gaming = () => {
           Join Waitlist
         </GameLink>
       </ComingSoon>
+      
+      <Disclaimer>
+        Disclaimer: ModMedia Enterprises and its branches (ModMedia Network, etc) are not affiliated with Nintendo or the above fan-made title creators, or any of the associated creators' published game websites; and we provide these links only as wholly external, free public entertainment reference to promote joy.
+      </Disclaimer>
       
       <Footer />
     </GamingContainer>
