@@ -26,8 +26,8 @@ app.post('/create-checkout-session', async (req, res) => {
           },
         ],
         mode: 'payment',
-        success_url: 'http://localhost:3000/success', // Adjust as needed
-        cancel_url: 'http://localhost:3000/cancel', // Adjust as needed
+        success_url: 'https://modmedia-site-eight.vercel.app/success', 
+        cancel_url: 'https://modmedia-site-eight.vercel.app/cancel', 
       });
 
       res.json({ id: session.id });
