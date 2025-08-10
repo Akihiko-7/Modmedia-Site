@@ -150,7 +150,7 @@ const Checkout = () => {
       });
 
       const { id } = await response.json();
-      const stripe = await loadStripe('pk_test_51QFZOuGwmgelXEBYciZPTiaeUJGZPtr23YVAQXXM0jkRZIJsXglWRrf35yN1H3Sq0sn4qadTt0SyLqExaNoa1kVu00CeARbf1S');
+      const stripe = await loadStripe('pk_live_51RudSmAJeVnXEtRF8Bqnq8ZTGOJGyKOnBdDRDOkXzGJ1JirezuAFQWA2Z4ZBmMSGOxDaV977qhgKrXa8dCKUNCdg00qv531Sov');
       await stripe.redirectToCheckout({ sessionId: id });
     } catch (error) {
       console.error('Stripe payment error:', error);
