@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const stripe = require('stripe')('sk_test_51QFZOuGwmgelXEBYRwZiLscg2503JsPD88bcYGusLpz7zgyJvuZxgLxe5bq23pX493eQmOSpQU1EUgSPB2r8AH2t00070dR4Jd');
+const stripe = require('stripe')('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');
 
 const app = express();
 app.use(cors());
@@ -20,7 +20,7 @@ app.post('/create-checkout-session', async (req, res) => {
               product_data: {
                 name: serviceName,
               },
-              unit_amount: amount * 100, // Stripe expects amount in cents
+              unit_amount: amount * 100,
             },
             quantity: 1,
           },
@@ -36,7 +36,6 @@ app.post('/create-checkout-session', async (req, res) => {
       res.status(500).json({ error: 'Error creating checkout session' });
     }
   } else if (method === 'paypal') {
-    // Handle PayPal if needed
     res.status(400).json({ error: 'PayPal not implemented' });
   } else {
     res.status(400).json({ error: 'Invalid payment method' });
