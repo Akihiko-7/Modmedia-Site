@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import HeroSection from '../components/HeroSection';
 import Footer from '../components/Footer';
 
-// Animations
 const float = keyframes`
   0% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
@@ -27,7 +26,6 @@ const fadeIn = keyframes`
   to { opacity: 1; transform: translateY(0); }
 `;
 
-// Styled Components
 const NFTContainer = styled.div`
   background: linear-gradient(135deg, #0a0a1a 0%, #121228 100%);
   min-height: 100vh;
@@ -275,24 +273,10 @@ const SnowdenNFTs = () => {
     { src: '/assets/Pg5Final.jpg', caption: 'Freedom', rarity: 'Common', id: 5 },
   ]);
 
-  const [lockedContent] = useState([
-    { src: '/assets/nft6.png', caption: 'Top Secret', rarity: 'Ultra Rare', id: 6 },
-    { src: '/assets/nft7.png', caption: 'Encrypted', rarity: 'Legendary', id: 7 },
-    { src: '/assets/nft8.png', caption: 'Shadow', rarity: 'Epic', id: 8 },
-    { src: '/assets/nft9.png', caption: 'Citizenfour', rarity: 'Mythic', id: 9 },
-    { src: '/assets/nft10.png', caption: 'Patriot', rarity: 'Ultra Rare', id: 10 },
-  ]);
-
   const [expanded, setExpanded] = useState(null);
 
-  const handleMint = (id) => {
-    console.log(`Minting NFT #${id}`);
-    // Minting logic will be implemented here
-  };
-
   const handleUnlockPDF = () => {
-    console.log('Unlocking exclusive content');
-    // PDF unlock logic will be implemented here
+    window.open('https://drive.google.com/file/d/1QfRmshk3MpmCzpZ8EKj9bUPzpOpPDUlY/view?usp=sharing', '_blank');
   };
 
   const toggleExpand = (id) => {
@@ -340,11 +324,10 @@ const SnowdenNFTs = () => {
         <p>
           Gain access to exclusive, never-before-seen Snowden archival content.
           This premium collection includes 5 ultra-rare digital artifacts that
-          complete your Snowden NFT collection. Mint now to receive the encrypted
-          PDF containing these classified materials.
+          complete your Snowden NFT collection. Click below to download the full comic PDF.
         </p>
         <MintButton onClick={handleUnlockPDF}>
-          Unlock Secret Archives ($20)
+          Download Full Comic PDF Here
         </MintButton>
       </PDFLockedSection>
 

@@ -101,7 +101,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <li><NavLink to="/snowden" onClick={toggleSidebar}>Snowden Crypto</NavLink></li>
           <li><NavLink to="/videos" onClick={toggleSidebar}>Crypto Cross Fire</NavLink></li>
           <li><NavLink to="/kaspa-future-economy" onClick={toggleSidebar}>Kaspa Future</NavLink></li>
-          <li><NavLink to="/snowden-nfts" onClick={toggleSidebar}>Snowden NFTs</NavLink></li>
+          <li><NavLink to="/snowden-nfts" onClick={toggleSidebar}>Snowden Comics</NavLink></li>
           <li><NavLink to="/free-speech" onClick={toggleSidebar}>Free Speech</NavLink></li>
           <li><NavLink to="/bear-market-2026" onClick={toggleSidebar}>Bear Market 2026</NavLink></li>
           <li><NavLink to="/support" onClick={toggleSidebar}>Support</NavLink></li>

@@ -393,8 +393,7 @@ const Snowden = () => {
 
   const handleSwap = (e) => {
     e.preventDefault();
-    const result = calculateSwap();
-    alert(`Swapping ${swapAmount} ${swapFrom} to ${result} ${swapTo}`);
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLScyYmn2NeZkdPk-gf3rRDxWiYUUCSlpbIH9PbdzKb-1z2vFOg/viewform?usp=dialog', '_blank');
   };
 
   return (
