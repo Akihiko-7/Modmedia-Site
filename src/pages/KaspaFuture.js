@@ -177,7 +177,7 @@ const KaspaFuture = () => {
   const [stats, setStats] = useState({
     price: '$0.00',
     marketCap: '$1.4B',
-    tps: '100+',
+    tps: '3000+',
     blocks: '2.1M',
     nodes: '5,000+'
   });

@@ -56,9 +56,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/gaming" element={<Gaming />} />
             <Route path="/snowden" element={<Snowden />} />
+            <Route path="/snowden-nfts" element={<SnowdenNFTs />} />
             <Route path="/videos" element={<Videos />} />
             <Route path="/kaspa-future-economy" element={<KaspaFuture />} />
-            <Route path="/snowden-nfts" element={<SnowdenNFTs />} />
             <Route path="/free-speech" element={<ArticlePage articleId="free-speech" />} />
             <Route path="/bear-market-2026" element={<ArticlePage articleId="bear-market-2026" />} />
             <Route path="/checkout" element={<Checkout />} />

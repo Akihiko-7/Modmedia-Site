@@ -265,6 +265,39 @@ const SectionHeader = styled.h2`
   }
 `;
 
+const StatsSection = styled.div`
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 10px;
+  padding: 40px;
+  margin: 60px auto;
+  max-width: 900px;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+  backdrop-filter: blur(10px);
+  animation: ${fadeIn} 1s ease-out;
+  text-align: center;
+
+  p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #e0e7ff;
+    margin: 10px 0;
+
+    strong {
+      color: #00d4ff;
+      font-weight: normal;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    
+    p {
+      font-size: 1.1rem;
+    }
+  }
+`;
+
 const SwapContainer = styled.div`
   background: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
@@ -476,6 +509,13 @@ const Snowden = () => {
             </div>
           </ImageCard>
         </ImageGrid>
+
+        <SectionHeader>Stats</SectionHeader>
+        <StatsSection>
+          <p><strong>HOLDERS:</strong> 10,000+ Web3 Users</p>
+          <p><strong>MINTED:</strong> 15,000 - 89% remains, still publicly minting!</p>
+          <p><strong>AGE:</strong> ONE YEAR SINCE LAUNCH</p>
+        </StatsSection>
 
         <SectionHeader>Token Swap</SectionHeader>
         

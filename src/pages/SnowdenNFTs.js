@@ -198,7 +198,7 @@ const Overlay = styled.div`
   z-index: 1999;
 `;
 
-const PDFLockedSection = styled.div`
+const ClassifiedSection = styled.div`
   background: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   padding: 40px;
@@ -210,6 +210,7 @@ const PDFLockedSection = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 2;
+  grid-column: 1 / -1;
 
   h2 {
     color: #ff6f61;
@@ -252,7 +253,7 @@ const MintButton = styled.button`
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 20px;
+  margin: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
   animation: ${pulse} 2s infinite;
@@ -262,6 +263,39 @@ const MintButton = styled.button`
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(255, 111, 97, 0.4);
   }
+`;
+
+const PopupOverlay = styled.div`
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+`;
+
+const PopupContent = styled.div`
+  background: rgba(34, 39, 51, 0.9);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+`;
+
+const PopupTitle = styled.h3`
+  color: #00d4ff;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+`;
+
+const PopupButtons = styled.div`
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 `;
 
 const SnowdenNFTs = () => {
@@ -274,9 +308,23 @@ const SnowdenNFTs = () => {
   ]);
 
   const [expanded, setExpanded] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleUnlockPDF = () => {
     window.open('https://drive.google.com/file/d/1QfRmshk3MpmCzpZ8EKj9bUPzpOpPDUlY/view?usp=sharing', '_blank');
+  };
+
+  const handleBuyPDF = () => {
+    localStorage.setItem(
+      'paymentDetails',
+      JSON.stringify({
+        service: 'comic-pdf',
+        serviceName: 'Comic PDF Password',
+        amount: 20,
+        method: 'stripe',
+      })
+    );
+    window.location.href = '/checkout';
   };
 
   const toggleExpand = (id) => {
@@ -294,6 +342,17 @@ const SnowdenNFTs = () => {
       />
       
       <NFTGrid>
+        <ClassifiedSection>
+          <h2>CLASSIFIED ARCHIVES</h2>
+          <p>
+            Gain access to exclusive, never-before-seen Snowden archival content.
+            This premium collection includes 5 ultra-rare digital artifacts that
+            complete your Snowden NFT collection. Click below to download the full comic PDF.
+          </p>
+          <MintButton onClick={() => setShowPopup(true)}>
+            Access Comic PDF
+          </MintButton>
+        </ClassifiedSection>
         {nfts.map((nft, index) => (
           <NFTItem key={nft.id} delay={`${index * 0.1}s`}>
             <NFTImage>
@@ -319,17 +378,21 @@ const SnowdenNFTs = () => {
         ))}
       </NFTGrid>
 
-      <PDFLockedSection>
-        <h2>CLASSIFIED ARCHIVES</h2>
-        <p>
-          Gain access to exclusive, never-before-seen Snowden archival content.
-          This premium collection includes 5 ultra-rare digital artifacts that
-          complete your Snowden NFT collection. Click below to download the full comic PDF.
-        </p>
-        <MintButton onClick={handleUnlockPDF}>
-          Download Full Comic PDF Here
-        </MintButton>
-      </PDFLockedSection>
+      {showPopup && (
+        <PopupOverlay onClick={() => setShowPopup(false)}>
+          <PopupContent onClick={(e) => e.stopPropagation()}>
+            <PopupTitle>Select an Option</PopupTitle>
+            <PopupButtons>
+              <MintButton onClick={handleBuyPDF}>
+                BUY COMIC PDF PASSWORD $20
+              </MintButton>
+              <MintButton onClick={handleUnlockPDF}>
+                DOWNLOAD COMIC PDF
+              </MintButton>
+            </PopupButtons>
+          </PopupContent>
+        </PopupOverlay>
+      )}
 
       <Footer />
     </NFTContainer>
