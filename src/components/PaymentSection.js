@@ -126,6 +126,7 @@ const PaymentSection = () => {
     { value: 'website', price: 200, name: 'Website Building - Basic Package - $200' },
     { value: 'ad-design', price: 10, name: 'ModMedia Designs Your Ad & Publishes - $10' },
     { value: 'subscribe-card', price: 5, name: 'Advertiser or Fan Subscribe - $5' },
+    { value: 'comic_pay', price: 20, name: 'Comic Pay - 20$'},
   ];
 
   const handleServiceChange = (e) => {

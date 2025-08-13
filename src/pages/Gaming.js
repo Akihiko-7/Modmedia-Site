@@ -484,13 +484,13 @@ const Gaming = () => {
           the gaming experience. Expect cutting-edge graphics, immersive storytelling, 
           and gameplay that pushes boundaries. Join our newsletter to stay updated!
         </p>
-        <GameLink as="button" style={{ background: 'linear-gradient(45deg, #ff9900, #ff3399)' }}>
+        <GameLink href="https://sub.modmedianow.com" target="_blank" rel="noopener noreferrer" style={{ background: 'linear-gradient(45deg, #ff9900, #ff3399)' }}>
           Join Waitlist
         </GameLink>
       </ComingSoon>
       
       <Disclaimer>
-        Disclaimer: ModMedia Enterprises and its branches (ModMedia Network, etc) are not affiliated with Nintendo or the above fan-made title creators, or any of the associated creators' published game websites; and we provide these links only as wholly external, free public entertainment reference to promote joy.
+        Disclaimer: ModMedia Enterprises and its branches (ModMedia Network, etc) are not affiliated with Nintendo or the above fan-made title creators, or any of the external fan games' creators' published game websites; and we provide these links only as wholly external, free public entertainment reference to promote joy.
       </Disclaimer>
       
       <Footer />
