@@ -2,12 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import PaymentSection from '../components/PaymentSection';
 import Card from '../components/Card';
-import TweetCard from '../components/TweetCard';
 import VideoSection from '../components/VideoSection';
 import Footer from '../components/Footer';
 import ContentGrid from '../components/ContentGrid';
 
-// Animations
 const float = keyframes`
   0% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
@@ -37,7 +35,6 @@ const scanline = keyframes`
   100% { background-position: 0 100vh; }
 `;
 
-// Global Styles
 const GlobalStyle = createGlobalStyle`
   body {
     background: linear-gradient(135deg, #0a0a1a 0%, #121228 100%);
@@ -315,6 +312,64 @@ const AnimatedGrid = styled(ContentGrid)`
   }
 `;
 
+const TweetCardContainer = styled.div`
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .tweet-wrapper {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 16px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    .bluesky-embed {
+      width: 100%;
+      margin: 0;
+      border: none;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    p {
+      margin: 0 0 12px 0;
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px;
+
+    .tweet-wrapper {
+      .bluesky-embed {
+        font-size: 0.85rem;
+      }
+    }
+  }
+`;
+
 const Home = () => {
   return (
     <>
@@ -333,24 +388,50 @@ const Home = () => {
         <h2>Latest Submissions</h2>
         <p className="subtitle">Click content to view full submission free of charge</p>
         <AnimatedGrid>
-          <TweetCard
-            uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lix452qpf22o"
-            cid="bafyreifdb6fj474dyaexcogz2qoaa7jfjxyk6y6fy4mqyth2oz36w4lfxu"
-            content="How Centralized is Your Favorite Crypto? Is it Backed by Mined Value (Proof-of-Work)? PS- Only Bitcoin & Kaspa were True Fair Launched!"
-            author="ModMedia"
-            timestamp="February 24, 2025 at 11:41 AM"
-            videoSrc="https://rumble.com/embed/v6q6atj/?pub=4"
-            videoTitle="Latest Crypto Cross Fire, Episode 5"
-          />
-          <TweetCard
-            uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lv7xxhmnbs2p"
-            cid="bafyreibba2xzk6bo7w3txizbd4pxqrt4vnn4zfwppaneavnnk2anh6hreu"
-            content="Due to ethical boundaries as a direct result of X Leadership recently, we are opting to explore Bluesky as ModMedia Enterprsises' prime social media outreach platform. Ethical problems with X include their promotion of Neuralink in &quot;billions&quot; of people, censorship &amp; more. Stay posted as we adjust."
-            author="ModMedia"
-            timestamp="July 30, 2025 at 6:22 PM"
-            videoSrc="https://rumble.com/embed/v6qi239/?pub=4"
-            videoTitle="Nature's Best Javelin Throw - ModMedia Made Video"
-          />
+          <TweetCardContainer>
+            <div className="tweet-wrapper">
+              <blockquote
+                className="bluesky-embed"
+                data-bluesky-uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lwawptvkns2h"
+                data-bluesky-cid="bafyreiafoo2owbfipbfupmpxyiztqnbjcv4uxxtkdthi4raonxuzo5ipoq"
+                data-bluesky-embed-color-mode="system"
+              >
+                <p lang="en">
+                  Introducing the Cryptographer&#x27;s EXILE Comic Chapter One, Founder&#x27;s Edition
+                  O U T  N OW!💥
+                  Leap into a realm of perilous cryptographic villains and hashgraph-deciphering heroes set 20 years into the future.
+                  Download for a discounted price while server supplies last. Learn More at www.MODMEDIANOW.COM<br /><br />
+                  <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawptvkns2h?ref_src=embed">[image or embed]</a>
+                </p>
+                &mdash; ModMedia Network™ (
+                <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3?ref_src=embed">@modmedianow.com</a>
+                ) <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawptvkns2h?ref_src=embed">August 12, 2025 at 8:58 PM</a>
+              </blockquote>
+              <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+            </div>
+          </TweetCardContainer>
+          <TweetCardContainer>
+            <div className="tweet-wrapper">
+              <blockquote
+                className="bluesky-embed"
+                data-bluesky-uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lwawfe6o722h"
+                data-bluesky-cid="bafyreielvm46xwiybma2fhtldv3j2z3zkfd2vbccqg42kedka4je76qua4"
+                data-bluesky-embed-color-mode="system"
+              >
+                <p lang="en">
+                  Announcing Kasparty.com
+                  Curious about cryptocurrencies?
+                  Whether you&#x27;re a seasoned Web3 pro or just dipping wetting your beak into crypto ecosystems, Kasparty is a great resource!
+                  100% nonprofit page to quickly learn about Crypto terms and facts, as well as a web browser &amp; more, FREE! Kasparty.com<br /><br />
+                  <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawfe6o722h?ref_src=embed">[image or embed]</a>
+                </p>
+                &mdash; ModMedia Network™ (
+                <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3?ref_src=embed">@modmedianow.com</a>
+                ) <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawfe6o722h?ref_src=embed">August 12, 2025 at 8:52 PM</a>
+              </blockquote>
+              <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+            </div>
+          </TweetCardContainer>
         </AnimatedGrid>
       </Submissions>
       
