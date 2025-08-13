@@ -58,8 +58,8 @@ const GalleryItem = styled.div`
 
 const ImageGallery = () => {
   const images = [
-    { src: '/assets/snowden-update1.png', caption: 'Follow Snowden on X', link: 'https://x.com/RescueSnowden/status/1836319095651995655' },
-    { src: '/assets/snowdn-update2.png', caption: 'ModMedia Updates on X', link: 'https://x.com/RescueSnowden/status/1858585449394208903' },
+    { src: '/assets/snowden-update1.png', caption: '', link: 'https://x.com/RescueSnowden/status/1836319095651995655' },
+    { src: '/assets/snowdn-update2.png', caption: '', link: 'https://x.com/RescueSnowden/status/1858585449394208903' },
     { src: '/assets/snowden_update3.png', caption: 'Edward Snowden on his Exile:', info: '"People look at me now and they think I\'m this crazy guy, I\'m this extremist or whatever. Some people have a misconception that [I] set out to burn down the NSA," he says. "But that\'s not what this was about. In many ways, 2013 wasn\'t about surveillance at all. What it was about was a violation of the Constitution.' },
   ];
 

@@ -482,7 +482,7 @@ const Snowden = () => {
               <h3>Follow Snowden</h3>
               <p>Stay updated with the latest $SNOWDN project updates.</p>
               <a href="https://x.com/RescueSnowden/status/1836319095651995655" target="_blank" rel="noopener noreferrer" className="social-link">
-                @RescueSnowden on X
+                
               </a>
             </div>
           </ImageCard>
@@ -493,7 +493,7 @@ const Snowden = () => {
               <h3>Project Updates</h3>
               <p>Get the latest news about the $SNOWDN project and its development roadmap.</p>
               <a href="https://x.com/RescueSnowden/status/1858585449394208903" target="_blank" rel="noopener noreferrer" className="social-link">
-                @RescueSnowden on X
+                
               </a>
             </div>
           </ImageCard>
@@ -504,7 +504,7 @@ const Snowden = () => {
               <h3>In His Own Words</h3>
               <p>"In many ways, 2013 wasn't about surveillance at all. What it was about was a violation of the Constitution."</p>
               <a href="https://x.com/Snowden" target="_blank" rel="noopener noreferrer" className="social-link">
-                @Snowden on X
+                
               </a>
             </div>
           </ImageCard>

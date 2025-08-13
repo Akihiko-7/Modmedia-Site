@@ -468,14 +468,6 @@ const Gaming = () => {
           </GameLink>
         </GameCard>
         
-        <GameCard style={{ animationDelay: '2s' }}>
-          <h3>Retro Arcade</h3>
-          <p>Coming soon - a collection of classic arcade games with a modern twist!</p>
-          <GameLink as="div" style={{ background: '#333', boxShadow: '0 0 15px #555', cursor: 'not-allowed' }}>
-            Coming Soon
-          </GameLink>
-        </GameCard>
-        
         <GameCard style={{ animationDelay: '3s' }}>
           <h3>Cryptographer's Exile</h3>
           <p>Our debut indie game - an epic adventure through cyberpunk landscapes!</p>
