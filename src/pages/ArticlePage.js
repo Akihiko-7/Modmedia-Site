@@ -57,13 +57,39 @@ const BackButton = styled.button`
 
 const articles = {
   'free-speech': {
-    title: 'European Free Speech Crackdown & Migrant Crisis',
+    title: 'Free Thought in the Big Tech World',
     content: (
       <>
-        <p>The number of EU citizens sentenced for 'speech crimes' in the last five years likely numbers in the thousands.</p>
-        <p>These same countries have admitted upwards of 12 million migrants in the last five years, and it’s estimated nearly double that amount (24 mil.) of undocumented migrants made entry to the EU since 2015.</p>
-        <p>Many nationally-tenured citizens of the European Union are increasingly frustrated with purported light sentencing of migrants, documented or otherwise, while certain longer nationally tenured citizens are being served lofty charges for speaking out against their governments' policies.</p>
-        <p>Some argue the EU treats migrants, undocumented or otherwise, with an unfair positive bias. In 2018, a German doctor was stabbed to death by a Somalian migrant. Five years later, the man was being released in German public for a year, three hours a day. Then, in April 2023 the Somalian government negotiated, and subsequently carried out an extradition of the convicted expat to Somalia (Einfach NÄher Dran Report, '23), where a large inheritance is rumored to be waiting for him.</p>
+        <p>How many things have you read lately that are utterly full of corporate agendas?
+
+Or bureaucratic agendas?</p>
+        <p>How many in the last week, the last few days?
+Is it even possible for you to figure this out accurately with how Big Tech operates to manipulate you?
+
+Why has free speech and free press been dying? Why do supposedly free citizens allow corrupt bullies to run things while we outnumber them Ten Million to one?
+
+How many times has a work boss personally put you down, making you feel like crap..? Or dumped you, fired you, laid you off because of their own incompetence to save their face?
+To write a selfish narrative in their head of their own superiority while the hardworking man suffers unnecessarily.</p>
+        <p>This has happened to me, with little to no fault of my own. In fact, it happened to all of America in 2008 when politicians (bribed with stock options) colluded with the banks to give banks billions in the USA's citizens hard earned income while the economy crashed, destroying citizens' livelihoods. Why?
+The Banks' slimy tactic of issuing immoral usury, high risk mortgage loans to millions of people imploded, and the banks then failed when those mortgages failed, ruining the economy.
+
+Why then, when the banks fail, do they get millions of USA taxpayer dollars delivered from our Government while years later rural Americans die with no substantial aid from natural disasters or opiate crisis?
+
+Why would self respecting citizens in the free world, or any country for that matter, put up with this?
+
+The good news is: We have new tools to push back.
+
+ Self-custodying cryptocurrencies so the government can't seize our hard earnings... Phones to communicate and organize against corrupt practices and to coordinate building local, fair cryptocurrency economies in our neighborhoods.
+
+ModMedia Network is here to stay. We will fight the good, common man and woman's fight, even when they may be too scared at first to begin doing so themselves. We will be that spark for them to think free and start standing up for themselves against tyranny of all kinds.
+
+Perhaps one day, ModMedia will progress to be a massive, most decentralized journalism and entertainment platform in the world.
+This is our dream, and from there we will leave a legacy of healthy change and hard conversations that lead to more liberty and freedom increasing tools for people both in the USA and worldwide.
+
+Thanks for reading. We emphasize quality over quantity here at ModMedia, and we're just getting started.
+
+Charles Sprain
+Founder of ModMedia Enterprises</p>
       </>
     ),
   },

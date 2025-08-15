@@ -444,8 +444,8 @@ const Home = () => {
           <Card
             cardId="free-speech"
             imgSrc="/assets/Free-speech.jpg"
-            title="European Free Speech Crackdown & Migrant Crisis"
-            previewContent="The number of EU citizens sentenced for 'speech crimes' in the last five years likely numbers in the thousands."
+            title="Free Thought in the Big Tech World."
+            previewContent="How many things have you read lately that are utterly full of corporate agendas?"
             link="/free-speech"
           />
           <Card

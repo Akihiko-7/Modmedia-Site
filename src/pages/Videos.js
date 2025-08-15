@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 import HeroSection from '../components/HeroSection';
 import Footer from '../components/Footer';
 
-// Animations
 const neonGlow = keyframes`
   0% { text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff; }
   50% { text-shadow: 0 0 15px #ff00ff, 0 0 25px #ff00ff; }
@@ -21,12 +20,6 @@ const float = keyframes`
   100% { transform: translateY(0px); }
 `;
 
-const pulse = keyframes`
-  0% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(0, 212, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
-`;
-
 const glitch = keyframes`
   0% { clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%); }
   10% { clip-path: polygon(0 5%, 100% 15%, 100% 95%, 0 85%); }
@@ -41,7 +34,6 @@ const glitch = keyframes`
   100% { clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%); }
 `;
 
-// Styled Components
 const VideoPortal = styled.div`
   background: linear-gradient(135deg, #0a0a1a 0%, #121228 100%);
   min-height: 100vh;
@@ -214,10 +206,6 @@ const VideoPod = styled.div`
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
     border-color: rgba(255, 0, 255, 0.5);
-
-    .video-overlay {
-      opacity: 1;
-    }
   }
 
   &::before {
@@ -254,49 +242,6 @@ const VideoDisplay = styled.div`
 
   @media (max-width: 768px) {
     height: 200px;
-  }
-`;
-
-const VideoOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2;
-`;
-
-const VideoTitle = styled.h4`
-  color: #fff;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  text-align: center;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-`;
-
-const PlayButton = styled.button`
-  background: linear-gradient(45deg, #00d4ff, #ff00ff);
-  color: #0a0a1a;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  animation: ${pulse} 2s infinite;
-  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.3);
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(255, 0, 255, 0.4);
   }
 `;
 
@@ -355,42 +300,40 @@ const GlitchBanner = styled.div`
 const Videos = () => {
   const [activeVideo, setActiveVideo] = useState(0);
   const [showGlitch, setShowGlitch] = useState(true);
+  const iframeRefs = useRef([]);
 
   const videos = [
     {
       id: 1,
-      title: "Crypto Cross Fire™ Episode 5",
+      title: "Crypto Cross Fire™ Episode 4",
       embedUrl: "https://rumble.com/embed/v6ovqqq/?pub=4",
       description: "Latest crypto market analysis and heated debates",
-      date: "May 15, 2025"
+      date: "May 15, 2025",
+      rumbleUrl: "https://rumble.com/v6ovqqq"
     },
     {
       id: 2,
-      title: "Crypto Cross Fire™ Episode 4",
+      title: "Crypto Cross Fire™ Episode 3",
       embedUrl: "https://rumble.com/embed/v6jwhg9/?pub=4",
       description: "Deep dive into Kaspa's revolutionary technology",
-      date: "April 28, 2025"
+      date: "April 28, 2025",
+      rumbleUrl: "https://rumble.com/v6jwhg9"
     },
     {
       id: 3,
-      title: "Crypto Cross Fire™ Episode 3",
+      title: "Crypto Cross Fire™ Episode 2",
       embedUrl: "https://rumble.com/embed/v6ok14o/?pub=4",
       description: "Bitcoin halving special with expert predictions",
-      date: "April 10, 2025"
+      date: "April 10, 2025",
+      rumbleUrl: "https://rumble.com/v6ok14o"
     },
     {
       id: 4,
-      title: "Crypto Cross Fire™ Episode 2",
+      title: "Crypto Cross Fire™ Episode 1",
       embedUrl: "https://rumble.com/embed/v6q6atj/?pub=4",
       description: "Regulation showdown - SEC vs Crypto",
-      date: "March 22, 2025"
-    },
-    {
-      id: 5,
-      title: "Crypto Cross Fire™ Episode 1",
-      embedUrl: "https://rumble.com/embed/v6qi239/?pub=4",
-      description: "Premiere episode - The future of decentralized finance",
-      date: "March 5, 2025"
+      date: "March 22, 2025",
+      rumbleUrl: "https://rumble.com/v6q6atj"
     }
   ];
 
@@ -401,6 +344,23 @@ const Videos = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleVideoClick = (index) => {
+    const iframe = iframeRefs.current[index];
+    if (iframe) {
+      iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+      setTimeout(() => {
+        const currentIframe = iframeRefs.current[index];
+        if (currentIframe) {
+          currentIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        }
+      }, 100);
+    }
+  };
+
+  const handleVideoDoubleClick = (url) => {
+    window.open(url, '_blank');
+  };
 
   return (
     <VideoPortal>
@@ -433,19 +393,17 @@ const Videos = () => {
         <VideoHub>
           {videos.map((video, index) => (
             <VideoPod key={video.id} delay={`${index * 0.1}s`}>
-              <VideoDisplay>
+              <VideoDisplay
+                onClick={() => handleVideoClick(index)}
+                onDoubleClick={() => handleVideoDoubleClick(video.rumbleUrl)}
+              >
                 <iframe
+                  ref={el => iframeRefs.current[index] = el}
                   src={video.embedUrl}
                   frameBorder="0"
                   allowFullScreen
                   title={video.title}
                 />
-                <VideoOverlay className="video-overlay">
-                  <VideoTitle>{video.title}</VideoTitle>
-                  <PlayButton onClick={() => setActiveVideo(index)}>
-                    Watch Now
-                  </PlayButton>
-                </VideoOverlay>
               </VideoDisplay>
               <VideoInfo>
                 <h3>{video.title}</h3>
