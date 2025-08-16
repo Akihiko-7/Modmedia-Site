@@ -460,8 +460,8 @@ const Home = () => {
       
       <FeaturedVideoSection>
         <VideoSection
-          src="https://player.vimeo.com/video/1073658206?h=807f031d17"
-          title="Featured Video"
+          src="https://player.vimeo.com/video/1044232074?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+          title="Snowden 12 Yr. Exile- �️Snowden Crypto in Sidebar"
         />
       </FeaturedVideoSection>
       

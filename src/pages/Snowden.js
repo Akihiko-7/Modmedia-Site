@@ -181,6 +181,21 @@ const ImageCard = styled.div`
       }
     }
   }
+
+  .video-container {
+    position: relative;
+    padding-top: 56.25%;
+    width: 100%;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
 `;
 
 const PriceTicker = styled.div`
@@ -477,35 +492,11 @@ const Snowden = () => {
 
         <ImageGrid>
           <ImageCard delay="0.2s">
-            <img src="/assets/snowden-update1.png" alt="Snowden Update" />
+            <div className="video-container">
+              <iframe src="https://player.vimeo.com/video/1044232074?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Snowden 12 Yr. Exile- �️Snowden Crypto in Sidebar"></iframe>
+            </div>
             <div className="card-content">
-              <h3>Follow Snowden</h3>
               <p>Stay updated with the latest $SNOWDN project updates.</p>
-              <a href="https://x.com/RescueSnowden/status/1836319095651995655" target="_blank" rel="noopener noreferrer" className="social-link">
-                
-              </a>
-            </div>
-          </ImageCard>
-
-          <ImageCard delay="0.4s">
-            <img src="/assets/snowdn-update2.png" alt="ModMedia Update" />
-            <div className="card-content">
-              <h3>Project Updates</h3>
-              <p>Get the latest news about the $SNOWDN project and its development roadmap.</p>
-              <a href="https://x.com/RescueSnowden/status/1858585449394208903" target="_blank" rel="noopener noreferrer" className="social-link">
-                
-              </a>
-            </div>
-          </ImageCard>
-
-          <ImageCard delay="0.6s">
-            <img src="/assets/snowden_update3.png" alt="Snowden in Exile" />
-            <div className="card-content">
-              <h3>In His Own Words</h3>
-              <p>"In many ways, 2013 wasn't about surveillance at all. What it was about was a violation of the Constitution."</p>
-              <a href="https://x.com/Snowden" target="_blank" rel="noopener noreferrer" className="social-link">
-                
-              </a>
             </div>
           </ImageCard>
         </ImageGrid>
