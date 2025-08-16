@@ -392,20 +392,16 @@ const Home = () => {
             <div className="tweet-wrapper">
               <blockquote
                 className="bluesky-embed"
-                data-bluesky-uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lwawptvkns2h"
-                data-bluesky-cid="bafyreiafoo2owbfipbfupmpxyiztqnbjcv4uxxtkdthi4raonxuzo5ipoq"
+                data-bluesky-uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lwjzven3gk2n"
+                data-bluesky-cid="bafyreig2mh6cxvdefchdwvlx3jpva5q6gq7ycn3jgnwqwwvd6stkj76jwi"
                 data-bluesky-embed-color-mode="system"
               >
                 <p lang="en">
-                  Introducing the Cryptographer&#x27;s EXILE Comic Chapter One, Founder&#x27;s Edition
-                  O U T  N OW!💥
-                  Leap into a realm of perilous cryptographic villains and hashgraph-deciphering heroes set 20 years into the future.
-                  Download for a discounted price while server supplies last. Learn More at www.MODMEDIANOW.COM<br /><br />
-                  <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawptvkns2h?ref_src=embed">[image or embed]</a>
+                  NEW ARTICLE OUT NOW!<br/><br/>&quot;Free Thought in the Big Tech World&quot;<br/><br/>Liberate your mind and spirit today from thought-manipulating tendrils of Big Tech.<br/><br/>Our content is human, fresh thought &amp; opinions, not recycled AI junk.<br/><br/>Why wait? Read Free today in the &#x27;Featured Articles&#x27; Section of www.MODMEDIANOW.com!<br/><br/><a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwjzven3gk2n?ref_src=embed">[image or embed]</a>
                 </p>
                 &mdash; ModMedia Network™ (
                 <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3?ref_src=embed">@modmedianow.com</a>
-                ) <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawptvkns2h?ref_src=embed">August 12, 2025 at 8:58 PM</a>
+                ) <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwjzven3gk2n?ref_src=embed">August 16, 2025 at 11:49 AM</a>
               </blockquote>
               <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
             </div>
@@ -414,20 +410,16 @@ const Home = () => {
             <div className="tweet-wrapper">
               <blockquote
                 className="bluesky-embed"
-                data-bluesky-uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lwawfe6o722h"
-                data-bluesky-cid="bafyreielvm46xwiybma2fhtldv3j2z3zkfd2vbccqg42kedka4je76qua4"
+                data-bluesky-uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lwawptvkns2h"
+                data-bluesky-cid="bafyreiafoo2owbfipbfupmpxyiztqnbjcv4uxxtkdthi4raonxuzo5ipoq"
                 data-bluesky-embed-color-mode="system"
               >
                 <p lang="en">
-                  Announcing Kasparty.com
-                  Curious about cryptocurrencies?
-                  Whether you&#x27;re a seasoned Web3 pro or just dipping wetting your beak into crypto ecosystems, Kasparty is a great resource!
-                  100% nonprofit page to quickly learn about Crypto terms and facts, as well as a web browser &amp; more, FREE! Kasparty.com<br /><br />
-                  <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawfe6o722h?ref_src=embed">[image or embed]</a>
+                  Introducing the Cryptographer&#x27;s EXILE Comic Chapter One, Founder&#x27;s Edition O U T  N OW!💥<br/><br/>Leap into a realm of perilous cryptographic villains and hashgraph-deciphering heroes set 20 years into the future.<br/><br/>Download for a discounted price while server supplies last. Learn More at www.MODMEDIANOW.COM<br/><br/><a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawptvkns2h?ref_src=embed">[image or embed]</a>
                 </p>
                 &mdash; ModMedia Network™ (
                 <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3?ref_src=embed">@modmedianow.com</a>
-                ) <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawfe6o722h?ref_src=embed">August 12, 2025 at 8:52 PM</a>
+                ) <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawptvkns2h?ref_src=embed">August 12, 2025 at 8:58 PM</a>
               </blockquote>
               <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
             </div>
