@@ -390,6 +390,19 @@ const Home = () => {
         <AnimatedGrid>
           <TweetCardContainer>
             <div className="tweet-wrapper">
+              <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lwjzven3gk2n" data-bluesky-cid="bafyreig2mh6cxvdefchdwvlx3jpva5q6gq7ycn3jgnwqwwvd6stkj76jwi" data-bluesky-embed-color-mode="system"><p lang="en">NEW ARTICLE OUT NOW!
+
+&quot;Free Thought in the Big Tech World&quot;
+
+Liberate your mind and spirit today from thought-manipulating tendrils of Big Tech.
+
+Our content is human, fresh thought &amp; opinions, not recycled AI junk.
+
+Why wait? Read Free today in the &#x27;Featured Articles&#x27; Section of www.MODMEDIANOW.com!<br><br><a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwjzven3gk2n?ref_src=embed">[image or embed]</a></p>&mdash; ModMedia Network™ (<a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3?ref_src=embed">@modmedianow.com</a>) <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwjzven3gk2n?ref_src=embed">August 16, 2025 at 11:49 AM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+            </div>
+          </TweetCardContainer>
+          <TweetCardContainer>
+            <div className="tweet-wrapper">
               <blockquote
                 className="bluesky-embed"
                 data-bluesky-uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lwawptvkns2h"
@@ -406,28 +419,6 @@ const Home = () => {
                 &mdash; ModMedia Network™ (
                 <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3?ref_src=embed">@modmedianow.com</a>
                 ) <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawptvkns2h?ref_src=embed">August 12, 2025 at 8:58 PM</a>
-              </blockquote>
-              <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
-            </div>
-          </TweetCardContainer>
-          <TweetCardContainer>
-            <div className="tweet-wrapper">
-              <blockquote
-                className="bluesky-embed"
-                data-bluesky-uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lwawfe6o722h"
-                data-bluesky-cid="bafyreielvm46xwiybma2fhtldv3j2z3zkfd2vbccqg42kedka4je76qua4"
-                data-bluesky-embed-color-mode="system"
-              >
-                <p lang="en">
-                  Announcing Kasparty.com
-                  Curious about cryptocurrencies?
-                  Whether you&#x27;re a seasoned Web3 pro or just dipping wetting your beak into crypto ecosystems, Kasparty is a great resource!
-                  100% nonprofit page to quickly learn about Crypto terms and facts, as well as a web browser &amp; more, FREE! Kasparty.com<br /><br />
-                  <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawfe6o722h?ref_src=embed">[image or embed]</a>
-                </p>
-                &mdash; ModMedia Network™ (
-                <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3?ref_src=embed">@modmedianow.com</a>
-                ) <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwawfe6o722h?ref_src=embed">August 12, 2025 at 8:52 PM</a>
               </blockquote>
               <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
             </div>
