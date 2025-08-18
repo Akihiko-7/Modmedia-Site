@@ -117,6 +117,46 @@ const MissionStatement = styled.div`
   }
 `;
 
+const WhitepaperSection = styled.div`
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 10px;
+  padding: 40px;
+  margin: 60px auto;
+  max-width: 900px;
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+  backdrop-filter: blur(10px);
+  animation: ${fadeIn} 1s ease-out;
+  text-align: center;
+
+  p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #e0e7ff;
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: #ff00ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #00d4ff;
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 20px;
+    
+    p {
+      font-size: 1.1rem;
+    }
+  }
+`;
+
 const ImageGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -465,6 +505,11 @@ const Snowden = () => {
             The $SNOWDN token isn't just a cryptocurrency—it's a statement. Built on Kaspa's revolutionary blockDAG technology, it represents the future of decentralized, private, and censorship-resistant value transfer.
           </p>
         </MissionStatement>
+
+        <WhitepaperSection>
+          <p>Our original Nonprofit KRC20 project, $SNOWDN, WHITEPAPER UPDATED 4/26/25</p>
+          <p><a href="https://t.me/RescueSNOWDN/8" target="_blank" rel="noopener noreferrer">More SNOWDN Info⤵️</a></p>
+        </WhitepaperSection>
 
         <PriceTicker>
           <div className="price-item">
