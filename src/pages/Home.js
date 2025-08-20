@@ -390,19 +390,13 @@ const Home = () => {
         <AnimatedGrid>
           <TweetCardContainer>
             <div className="tweet-wrapper">
-              <blockquote
-                className="bluesky-embed"
-                data-bluesky-uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lwjzven3gk2n"
-                data-bluesky-cid="bafyreig2mh6cxvdefchdwvlx3jpva5q6gq7ycn3jgnwqwwvd6stkj76jwi"
-                data-bluesky-embed-color-mode="system"
-              >
-                <p lang="en">
-                  NEW ARTICLE OUT NOW!<br/><br/>&quot;Free Thought in the Big Tech World&quot;<br/><br/>Liberate your mind and spirit today from thought-manipulating tendrils of Big Tech.<br/><br/>Our content is human, fresh thought &amp; opinions, not recycled AI junk.<br/><br/>Why wait? Read Free today in the &#x27;Featured Articles&#x27; Section of www.MODMEDIANOW.com!<br/><br/><a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwjzven3gk2n?ref_src=embed">[image or embed]</a>
-                </p>
-                &mdash; ModMedia Network™ (
-                <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3?ref_src=embed">@modmedianow.com</a>
-                ) <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwjzven3gk2n?ref_src=embed">August 16, 2025 at 11:49 AM</a>
-              </blockquote>
+              <blockquote className="bluesky-embed" data-bluesky-uri="at://did:plc:yjxcuolnx4n4bzjdu6aeaoq3/app.bsky.feed.post/3lwmovs4pvc2w" data-bluesky-cid="bafyreidnjvkoh4futcwbzmhdc564rdlmegsvrv2wrruyeciffk2iyl7caq" data-bluesky-embed-color-mode="system"><p lang="en">A Scream into the Void Against the Cults of Self-Serving in America
+
+Notice construction workers&#x27; suicides, they who built white collar buildings.
+
+Remember the people &amp; communities backstabbed to maintain many sedentary rigid corporations.
+
+Demand justice on politicians who sell out for stocks/war.<br><br><a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwmovs4pvc2w?ref_src=embed">[image or embed]</a></p>&mdash; ModMedia Network™ (<a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3?ref_src=embed">@modmedianow.com</a>) <a href="https://bsky.app/profile/did:plc:yjxcuolnx4n4bzjdu6aeaoq3/post/3lwmovs4pvc2w?ref_src=embed">August 17, 2025 at 1:10 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
               <script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
             </div>
           </TweetCardContainer>
